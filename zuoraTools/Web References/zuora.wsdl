@@ -1,0 +1,1859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://api.zuora.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:zns="http://api.zuora.com/" xmlns:ons="http://object.api.zuora.com/" xmlns:fns="http://fault.api.zuora.com/" targetNamespace="http://api.zuora.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <q1:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://object.api.zuora.com/" xmlns:q1="http://www.w3.org/2001/XMLSchema">
+      <q1:import namespace="http://api.zuora.com/" />
+      <q1:complexType name="zObject">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="fieldsToNull" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" maxOccurs="1" name="Id" nillable="true" type="zns:ID" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="AccountingCode">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="Category" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="GLAccountName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GLAccountNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Name" type="q1:string" />
+              <q1:element minOccurs="0" name="Notes" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Type" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="AccountingPeriod">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="EndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="FiscalYear" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Notes" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="StartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Account">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AdditionalEmailAddresses" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AllowInvoiceEdit" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="AutoPay" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="Balance" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Batch" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BcdSettingOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BillCycleDay" type="q1:int" />
+              <q1:element minOccurs="0" name="BillToId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CommunicationProfileId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="CreditBalance" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="CrmId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Currency" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CustomerServiceRepName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="DefaultPaymentMethodId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="InvoiceDeliveryPrefsEmail" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="InvoiceDeliveryPrefsPrint" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="InvoiceTemplateId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="LastInvoiceDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Notes" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ParentId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PaymentGateway" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaymentTerm" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PurchaseOrderNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SalesRepName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SoldToId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxExemptCertificateID" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxExemptCertificateType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxExemptDescription" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxExemptEffectiveDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TaxExemptExpirationDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TaxExemptIssuingJurisdiction" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxExemptStatus" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TotalInvoiceBalance" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="InvoiceItemAdjustment">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AdjustmentDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="AdjustmentNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Amount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="CancelledById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CancelledDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Comment" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="CustomerName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CustomerNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="InvoiceItemName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="InvoiceNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ReasonCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ReferenceId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ServiceEndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ServiceStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SourceId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SourceType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TransferredToAccounting" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Type" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Amendment">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AutoRenew" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="Code" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ContractEffectiveDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="CustomerAcceptanceDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="EffectiveDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InitialTerm" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RatePlanData" nillable="true" type="zns:RatePlanData" />
+              <q1:element minOccurs="0" name="RenewalTerm" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="ServiceActivationDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SubscriptionId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="TermStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TermType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Type" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Contact">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="Address1" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Address2" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="City" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Country" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="County" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Fax" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="FirstName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="HomePhone" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="LastName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="MobilePhone" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="NickName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="OtherPhone" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="OtherPhoneType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PersonalEmail" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PostalCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="State" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxRegion" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="WorkEmail" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="WorkPhone" nillable="true" type="q1:string" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Invoice">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AdjustmentAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Amount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="AmountWithoutTax" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Balance" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Body" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Comments" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="CreditBalanceAdjustmentAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="DueDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="IncludesOneTime" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="IncludesRecurring" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="IncludesUsage" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="InvoiceDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InvoiceNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="LastEmailSentDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="PaymentAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="PostedBy" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PostedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="RefundAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="RegenerateInvoicePDF" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TargetDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TaxAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="TaxExemptAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="TransferredToAccounting" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Refund">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Amount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="CancelledOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Comment" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Gateway" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayOptionData" nillable="true" type="zns:GatewayOptionData" />
+              <q1:element minOccurs="0" name="GatewayResponse" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayResponseCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayState" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="MarkedForSubmissionOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="MethodType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaymentId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PaymentMethodId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PaymentMethodSnapshotId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="ReasonCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ReferenceID" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RefundDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="RefundNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RefundTransactionTime" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SecondRefundReferenceId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SettledOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SoftDescriptor" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SoftDescriptorPhone" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SourceType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SubmittedOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TransferredToAccounting" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Type" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="RefundInvoicePayment">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InvoicePaymentId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RefundAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="RefundId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="RefundTransactionLog">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="BatchId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayReasonCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayReasonCodeDescription" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayState" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayTransactionType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RefundId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RequestString" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ResponseString" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TransactionDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TransactionId" nillable="true" type="q1:string" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="InvoiceItem">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AppliedToInvoiceItemId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="ChargeAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="ChargeDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ChargeDescription" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="ProcessingType" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="ProductDescription" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ProductId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="ProductName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Quantity" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="RatePlanChargeId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RevRecCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RevRecStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="RevRecTriggerCondition" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ServiceEndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ServiceStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SKU" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SubscriptionId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="SubscriptionNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="TaxCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxExemptAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="TaxMode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UnitPrice" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="UOM" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="InvoicePayment">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="Amount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PaymentId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RefundAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Payment">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Amount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="AppliedCreditBalanceAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="AppliedInvoiceAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="AuthTransactionId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankIdentificationNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CancelledOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Comment" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="EffectiveDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Gateway" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayOptionData" nillable="true" type="zns:GatewayOptionData" />
+              <q1:element minOccurs="0" name="GatewayOrderId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayResponse" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayResponseCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayState" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="InvoiceNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="MarkedForSubmissionOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="PaymentMethodId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PaymentMethodSnapshotId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PaymentNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ReferenceId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RefundAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="SecondPaymentReferenceId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SettledOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SoftDescriptor" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SoftDescriptorPhone" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SubmittedOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TransferredToAccounting" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Type" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="PaymentTransactionLog">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AVSResponseCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BatchId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CVVResponseCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayReasonCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayReasonCodeDescription" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayState" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayTransactionType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaymentId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RequestString" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ResponseString" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TransactionDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TransactionId" nillable="true" type="q1:string" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="PaymentMethod">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AchAbaCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountNumberMask" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchBankName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Active" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="BankIdentificationNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="CreditCardAddress1" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardAddress2" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardCity" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardCountry" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardExpirationMonth" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="CreditCardExpirationYear" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="CreditCardHolderName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardMaskNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardPostalCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardSecurityCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardState" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="DeviceSessionId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Email" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="GatewayOptionData" nillable="true" type="zns:GatewayOptionData" />
+              <q1:element minOccurs="0" name="IPAddress" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="LastFailedSaleTransactionDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="LastTransactionDateTime" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="LastTransactionStatus" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="MaxConsecutivePaymentFailures" nillable="true" type="q1:short" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="NumConsecutiveFailures" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="PaymentMethodStatus" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaymentRetryWindow" nillable="true" type="q1:short" />
+              <q1:element minOccurs="0" name="PaypalBaid" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaypalEmail" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaypalPreapprovalKey" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaypalType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Phone" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SecondTokenId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SkipValidation" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="TokenId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TotalNumberOfErrorPayments" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="TotalNumberOfProcessedPayments" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="Type" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="UseDefaultRetryRule" nillable="true" type="q1:boolean" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="PaymentMethodSnapshot">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AchAbaCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountNumberMask" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchAccountType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AchBankName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankBranchCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankCheckDigit" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankCity" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankIdentificationNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankPostalCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankStreetName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankStreetNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankTransferAccountName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankTransferAccountNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankTransferAccountNumberMask" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankTransferAccountType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BankTransferType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BusinessIdentificationCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="City" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Country" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardAddress1" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardAddress2" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardCity" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardCountry" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardExpirationMonth" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="CreditCardExpirationYear" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="CreditCardHolderName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardMaskNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardPostalCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardState" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreditCardType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="DeviceSessionId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Email" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ExistingMandate" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="FirstName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="IBAN" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="IPAddress" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="LastFailedSaleTransactionDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="LastName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="LastTransactionDateTime" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="LastTransactionStatus" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="MandateCreationDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="MandateID" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="MandateReceived" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="MandateUpdateDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="MaxConsecutivePaymentFailures" nillable="true" type="q1:short" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="NumConsecutiveFailures" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="PaymentMethodStatus" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaymentRetryWindow" nillable="true" type="q1:short" />
+              <q1:element minOccurs="0" name="PaypalBaid" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaypalEmail" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaypalPreapprovalKey" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PaypalType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Phone" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PostalCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SecondTokenId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="State" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="StreetName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="StreetNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TokenId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TotalNumberOfErrorPayments" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="TotalNumberOfProcessedPayments" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="Type" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UseDefaultRetryRule" nillable="true" type="q1:boolean" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Product">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="Category" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="EffectiveEndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="EffectiveStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SKU" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="ProductRatePlan">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="ActiveCurrencies" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="EffectiveEndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="EffectiveStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ProductId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="ProductRatePlanCharge">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ApplyDiscountTo" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BillCycleDay" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="BillCycleType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BillingPeriod" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BillingPeriodAlignment" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeModel" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="DefaultQuantity" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="DeferredRevenueAccount" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="DiscountLevel" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="IncludedUnits" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="LegacyRevenueReporting" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="MaxQuantity" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="MinQuantity" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="NumberOfPeriod" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="OverageCalculationOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="OverageUnusedUnitsCreditOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PriceChangeOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PriceIncreasePercentage" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="ProductRatePlanChargeTierData" nillable="true" type="zns:ProductRatePlanChargeTierData" />
+              <q1:element minOccurs="0" name="ProductRatePlanId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RecognizedRevenueAccount" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RevenueRecognitionRuleName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RevRecCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RevRecTriggerCondition" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SmoothingModel" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SpecificBillingPeriod" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="Taxable" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="TaxCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxMode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TriggerEvent" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UOM" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="UpToPeriods" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="UsageRecordRatingOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UseDiscountSpecificAccountingCode" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="UseTenantDefaultForPriceChange" nillable="true" type="q1:boolean" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="ProductRatePlanChargeTier">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Currency" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="DiscountAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="DiscountPercentage" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="EndingUnit" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="IsOveragePrice" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="Price" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="PriceFormat" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ProductRatePlanChargeId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="StartingUnit" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Tier" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="GatewayOption">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="value" nillable="true" type="q1:string" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="RatePlan">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AmendmentId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AmendmentSubscriptionRatePlanId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AmendmentType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ProductRatePlanId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="SubscriptionId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="RatePlanCharge">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ApplyDiscountTo" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BillCycleDay" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="BillCycleType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BillingPeriod" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="BillingPeriodAlignment" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargedThroughDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ChargeModel" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ChargeType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="DiscountAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="DiscountLevel" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="DiscountPercentage" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="DMRC" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="DTCV" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="EffectiveEndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="EffectiveStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="IncludedUnits" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="IsLastSegment" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="MRR" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="NumberOfPeriods" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="OriginalId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="OverageCalculationOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="OveragePrice" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="OverageUnusedUnitsCreditOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Price" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="PriceChangeOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="PriceIncreasePercentage" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="ProcessedThroughDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ProductRatePlanChargeId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="Quantity" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="RatePlanId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RevenueRecognitionRuleName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RevRecCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RevRecTriggerCondition" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RolloverBalance" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Segment" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="SpecificBillingPeriod" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="TCV" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="TriggerDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TriggerEvent" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UnusedUnitsCreditRates" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="UOM" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="UpToPeriods" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="UsageRecordRatingOption" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UseDiscountSpecificAccountingCode" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="Version" nillable="true" type="q1:long" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="RatePlanChargeTier">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="EndingUnit" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="IsOveragePrice" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="Price" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="PriceFormat" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="RatePlanChargeId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="StartingUnit" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="Tier" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Subscription">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AncestorAccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AutoRenew" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="CancelledDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ContractAcceptanceDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ContractEffectiveDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InitialTerm" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="IsInvoiceSeparate" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Notes" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="OriginalCreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="OriginalId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PreviousSubscriptionId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="RenewalTerm" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="ServiceActivationDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SubscriptionEndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SubscriptionStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TermEndDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TermStartDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TermType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Version" nillable="true" type="q1:int" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="TaxationItem">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ExemptAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="InvoiceItemId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="Jurisdiction" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="LocationCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxAmount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="TaxCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxCodeDescription" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="TaxRate" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="TaxRateDescription" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TaxRateType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Usage">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AccountNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AncestorAccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="ChargeId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="ChargeNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="EndDateTime" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="ImportId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="InvoiceNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Quantity" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="RbeStatus" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SourceName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SourceType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="StartDateTime" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SubmissionDateTime" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="SubscriptionId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="SubscriptionNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UOM" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Import">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="FileContent" nillable="true" type="q1:base64Binary" />
+              <q1:element minOccurs="0" name="ImportedCount" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="ImportType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Md5" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="OriginalResourceUrl" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ResultResourceUrl" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="StatusReason" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TotalCount" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="CreditBalanceAdjustment">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="AdjustmentDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Amount" nillable="true" type="q1:decimal" />
+              <q1:element minOccurs="0" name="CancelledOn" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Comment" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Number" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ReasonCode" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ReferenceId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SourceTransactionId" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SourceTransactionNumber" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SourceTransactionType" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="TransferredToAccounting" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Type" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="Export">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Encrypted" nillable="true" type="q1:boolean" />
+              <q1:element minOccurs="0" name="FileId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="Format" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Name" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Query" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="Size" nillable="true" type="q1:int" />
+              <q1:element minOccurs="0" name="Status" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="StatusReason" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Zip" nillable="true" type="q1:boolean" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="CommunicationProfile">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="Description" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="ProfileName" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="InvoiceSplit">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:complexType name="InvoiceSplitItem">
+        <q1:complexContent mixed="false">
+          <q1:extension base="ons:zObject">
+            <q1:sequence>
+              <q1:element minOccurs="0" name="CreatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="CreatedDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InvoiceDate" nillable="true" type="q1:dateTime" />
+              <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="InvoiceSplitId" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="PaymentTerm" nillable="true" type="q1:string" />
+              <q1:element minOccurs="0" name="SplitPercentage" nillable="true" type="q1:long" />
+              <q1:element minOccurs="0" name="UpdatedById" nillable="true" type="zns:ID" />
+              <q1:element minOccurs="0" name="UpdatedDate" nillable="true" type="q1:dateTime" />
+            </q1:sequence>
+          </q1:extension>
+        </q1:complexContent>
+      </q1:complexType>
+    </q1:schema>
+    <q1:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://api.zuora.com/" xmlns:q1="http://www.w3.org/2001/XMLSchema">
+      <q1:import namespace="http://object.api.zuora.com/" />
+      <q1:simpleType name="ID">
+        <q1:restriction base="q1:string">
+          <q1:pattern value="[a-zA-Z0-9]{32}|\d+" />
+        </q1:restriction>
+      </q1:simpleType>
+      <q1:complexType name="LoginResult">
+        <q1:sequence>
+          <q1:element name="Session" nillable="true" type="q1:string" />
+          <q1:element name="ServerUrl" nillable="true" type="q1:string" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="SubscribeRequest">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="Account" nillable="true" type="ons:Account" />
+          <q1:element minOccurs="0" name="PaymentMethod" nillable="true" type="ons:PaymentMethod" />
+          <q1:element minOccurs="0" name="BillToContact" nillable="true" type="ons:Contact" />
+          <q1:element minOccurs="0" name="PreviewOptions" nillable="true" type="zns:PreviewOptions" />
+          <q1:element minOccurs="0" name="SoldToContact" nillable="true" type="ons:Contact" />
+          <q1:element minOccurs="0" name="SubscribeOptions" nillable="true" type="zns:SubscribeOptions" />
+          <q1:element minOccurs="0" name="SubscriptionData" nillable="true" type="zns:SubscriptionData" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="SubscribeOptions">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="ApplyCreditBalance" nillable="true" type="q1:boolean" />
+          <q1:element minOccurs="0" name="ExternalPaymentOptions" nillable="true" type="zns:ExternalPaymentOptions" />
+          <q1:element minOccurs="0" name="GenerateInvoice" nillable="true" type="q1:boolean" />
+          <q1:element minOccurs="0" name="ProcessPayments" nillable="true" type="q1:boolean" />
+          <q1:element minOccurs="0" name="SubscribeInvoiceProcessingOptions" nillable="true" type="zns:SubscribeInvoiceProcessingOptions" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="SubscribeInvoiceProcessingOptions">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="InvoiceDate" nillable="true" type="q1:dateTime" />
+          <q1:element minOccurs="0" name="InvoiceProcessingScope" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" name="InvoiceTargetDate" nillable="true" type="q1:dateTime" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="SubscriptionData">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="Subscription" nillable="true" type="ons:Subscription" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="RatePlanData" nillable="true" type="zns:RatePlanData" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="RatePlanData">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="RatePlan" nillable="true" type="ons:RatePlan" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="RatePlanChargeData" nillable="true" type="zns:RatePlanChargeData" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="RatePlanChargeData">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="RatePlanCharge" nillable="true" type="ons:RatePlanCharge" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="RatePlanChargeTier" nillable="true" type="ons:RatePlanChargeTier" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="ProductRatePlanChargeTierData">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="ProductRatePlanChargeTier" nillable="true" type="ons:ProductRatePlanChargeTier" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="GatewayOptionData">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="200" name="GatewayOption" nillable="true" type="ons:GatewayOption" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="InvoiceData">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="Invoice" nillable="true" type="ons:Invoice" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="InvoiceItem" nillable="true" type="ons:InvoiceItem" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="InvoiceResult">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="Invoice" nillable="true" type="ons:Invoice" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="PreviewOptions">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="EnablePreviewMode" nillable="true" type="q1:boolean" />
+          <q1:element minOccurs="0" name="NumberOfPeriods" nillable="true" type="q1:int" />
+          <q1:element minOccurs="0" name="PreviewThroughTermEnd" nillable="true" type="q1:boolean" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="SubscribeResult">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="AccountId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" name="AccountNumber" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="Errors" nillable="true" type="zns:Error" />
+          <q1:element minOccurs="0" maxOccurs="1" name="GatewayResponse" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" maxOccurs="1" name="GatewayResponseCode" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="InvoiceData" nillable="true" type="zns:InvoiceData" />
+          <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" name="InvoiceNumber" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" name="InvoiceResult" nillable="true" type="zns:InvoiceResult" />
+          <q1:element minOccurs="0" name="PaymentId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" name="PaymentTransactionNumber" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" name="SubscriptionId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" name="SubscriptionNumber" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" maxOccurs="1" name="Success" type="q1:boolean" />
+          <q1:element minOccurs="0" name="TotalMrr" nillable="true" type="q1:decimal" />
+          <q1:element minOccurs="0" name="TotalTcv" nillable="true" type="q1:decimal" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="SaveResult">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="Errors" nillable="true" type="zns:Error" />
+          <q1:element minOccurs="0" maxOccurs="1" name="Id" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" maxOccurs="1" name="Success" type="q1:boolean" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="DeleteResult">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="errors" nillable="true" type="zns:Error" />
+          <q1:element minOccurs="0" maxOccurs="1" name="id" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" maxOccurs="1" name="success" type="q1:boolean" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="ExecuteResult">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="Errors" nillable="true" type="zns:Error" />
+          <q1:element minOccurs="0" maxOccurs="1" name="Id" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" maxOccurs="1" name="Success" type="q1:boolean" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:simpleType name="QueryLocator">
+        <q1:restriction base="q1:string" />
+      </q1:simpleType>
+      <q1:complexType name="QueryResult">
+        <q1:sequence>
+          <q1:element name="done" type="q1:boolean" />
+          <q1:element name="queryLocator" nillable="true" type="zns:QueryLocator" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="records" nillable="true" type="ons:zObject" />
+          <q1:element name="size" type="q1:int" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="Error">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="Code" nillable="true" type="zns:ErrorCode" />
+          <q1:element minOccurs="0" name="Message" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" name="Field" nillable="true" type="q1:string" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:simpleType name="ErrorCode">
+        <q1:restriction base="q1:string">
+          <q1:enumeration value="API_DISABLED" />
+          <q1:enumeration value="CANNOT_DELETE" />
+          <q1:enumeration value="CREDIT_CARD_PROCESSING_FAILURE" />
+          <q1:enumeration value="DUPLICATE_VALUE" />
+          <q1:enumeration value="INVALID_FIELD" />
+          <q1:enumeration value="INVALID_LOGIN" />
+          <q1:enumeration value="INVALID_SESSION" />
+          <q1:enumeration value="INVALID_TYPE" />
+          <q1:enumeration value="INVALID_ID" />
+          <q1:enumeration value="INVALID_VALUE" />
+          <q1:enumeration value="INVALID_VERSION" />
+          <q1:enumeration value="LOCK_COMPETITION" />
+          <q1:enumeration value="MALFORMED_QUERY" />
+          <q1:enumeration value="MAX_RECORDS_EXCEEDED" />
+          <q1:enumeration value="MISSING_REQUIRED_VALUE" />
+          <q1:enumeration value="NO_PERMISSION" />
+          <q1:enumeration value="SERVER_UNAVAILABLE" />
+          <q1:enumeration value="UNKNOWN_ERROR" />
+          <q1:enumeration value="TRANSACTION_FAILED" />
+          <q1:enumeration value="INVALID_TEMPLATE" />
+          <q1:enumeration value="ACCOUNTING_PERIOD_CLOSED" />
+          <q1:enumeration value="BATCH_FAIL_ERROR" />
+          <q1:enumeration value="PDF_QUERY_ERROR" />
+          <q1:enumeration value="REQUEST_EXCEEDED_LIMIT" />
+          <q1:enumeration value="REQUEST_EXCEEDED_RATE" />
+          <q1:enumeration value="REQUEST_REJECTED" />
+          <q1:enumeration value="TEMPORARY_ERROR" />
+          <q1:enumeration value="TRANSACTION_TERMINATED" />
+          <q1:enumeration value="TRANSACTION_TIMEOUT" />
+        </q1:restriction>
+      </q1:simpleType>
+      <q1:element name="login">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="1" name="username" type="q1:string" />
+            <q1:element minOccurs="0" maxOccurs="1" name="password" type="q1:string" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="loginResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="1" name="result" type="zns:LoginResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="subscribe">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="subscribes" type="zns:SubscribeRequest" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="subscribeResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="result" type="zns:SubscribeResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="create">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="zObjects" type="ons:zObject" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="createResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="result" type="zns:SaveResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="generate">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="zObjects" type="ons:zObject" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="generateResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="result" type="zns:SaveResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="update">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="zObjects" type="ons:zObject" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="updateResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="result" type="zns:SaveResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="delete">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="1" maxOccurs="1" name="type" type="q1:string" />
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="ids" type="zns:ID" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="deleteResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="result" type="zns:DeleteResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="execute">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="1" maxOccurs="1" name="type" type="q1:string" />
+            <q1:element minOccurs="1" maxOccurs="1" name="synchronous" type="q1:boolean" />
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="ids" type="zns:ID" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="executeResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="result" type="zns:ExecuteResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="query">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element name="queryString" type="q1:string" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="queryResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element name="result" type="zns:QueryResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="queryMore">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element name="queryLocator" type="zns:QueryLocator" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="queryMoreResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element name="result" type="zns:QueryResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="SessionHeader">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element name="session" type="q1:string" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="QueryOptions">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" name="batchSize" type="q1:int" />
+            <q1:element minOccurs="0" name="caseSensitive" type="q1:boolean" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="getUserInfoResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="1" maxOccurs="1" name="TenantId" type="q1:string" />
+            <q1:element minOccurs="1" maxOccurs="1" name="TenantName" type="q1:string" />
+            <q1:element minOccurs="1" maxOccurs="1" name="UserEmail" type="q1:string" />
+            <q1:element minOccurs="1" maxOccurs="1" name="UserFullName" type="q1:string" />
+            <q1:element minOccurs="1" maxOccurs="1" name="UserId" type="q1:string" />
+            <q1:element minOccurs="1" maxOccurs="1" name="Username" type="q1:string" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="getUserInfo">
+        <q1:complexType>
+          <q1:sequence />
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="DummyHeader">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" name="Account" nillable="true" type="ons:Account" />
+            <q1:element minOccurs="0" name="AccountingCode" nillable="true" type="ons:AccountingCode" />
+            <q1:element minOccurs="0" name="AccountingPeriod" nillable="true" type="ons:AccountingPeriod" />
+            <q1:element minOccurs="0" name="Amendment" nillable="true" type="ons:Amendment" />
+            <q1:element minOccurs="0" name="Invoice" nillable="true" type="ons:Invoice" />
+            <q1:element minOccurs="0" name="InvoiceItem" nillable="true" type="ons:InvoiceItem" />
+            <q1:element minOccurs="0" name="InvoicePayment" nillable="true" type="ons:InvoicePayment" />
+            <q1:element minOccurs="0" name="Import" nillable="true" type="ons:Import" />
+            <q1:element minOccurs="0" name="Payment" nillable="true" type="ons:Payment" />
+            <q1:element minOccurs="0" name="PaymentMethodSnapshot" nillable="true" type="ons:PaymentMethodSnapshot" />
+            <q1:element minOccurs="0" name="Product" nillable="true" type="ons:Product" />
+            <q1:element minOccurs="0" name="ProductRatePlan" nillable="true" type="ons:ProductRatePlan" />
+            <q1:element minOccurs="0" name="ProductRatePlanCharge" nillable="true" type="ons:ProductRatePlanCharge" />
+            <q1:element minOccurs="0" name="ProductRatePlanChargeTier" nillable="true" type="ons:ProductRatePlanChargeTier" />
+            <q1:element minOccurs="0" name="RatePlan" nillable="true" type="ons:RatePlan" />
+            <q1:element minOccurs="0" name="RatePlanCharge" nillable="true" type="ons:RatePlanCharge" />
+            <q1:element minOccurs="0" name="RatePlanChargeTier" nillable="true" type="ons:RatePlanChargeTier" />
+            <q1:element minOccurs="0" name="TaxationItem" nillable="true" type="ons:TaxationItem" />
+            <q1:element minOccurs="0" name="Usage" nillable="true" type="ons:Usage" />
+            <q1:element minOccurs="0" name="Refund" nillable="true" type="ons:Refund" />
+            <q1:element minOccurs="0" name="RefundInvoicePayment" nillable="true" type="ons:RefundInvoicePayment" />
+            <q1:element minOccurs="0" name="CreditBalanceAdjustment" nillable="true" type="ons:CreditBalanceAdjustment" />
+            <q1:element minOccurs="0" name="Export" nillable="true" type="ons:Export" />
+            <q1:element minOccurs="0" name="InvoiceItemAdjustment" nillable="true" type="ons:InvoiceItemAdjustment" />
+            <q1:element minOccurs="0" name="CommunicationProfile" nillable="true" type="ons:CommunicationProfile" />
+            <q1:element minOccurs="0" name="InvoiceSplit" nillable="true" type="ons:InvoiceSplit" />
+            <q1:element minOccurs="0" name="InvoiceSplitItem" nillable="true" type="ons:InvoiceSplitItem" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="CallOptions">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" name="useSingleTransaction" nillable="true" type="q1:boolean" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:complexType name="InvoiceProcessingOptions">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="InvoiceDate" nillable="true" type="q1:dateTime" />
+          <q1:element minOccurs="0" name="InvoiceTargetDate" nillable="true" type="q1:dateTime" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="AmendOptions">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="ApplyCreditBalance" nillable="true" type="q1:boolean" />
+          <q1:element minOccurs="0" name="ExternalPaymentOptions" nillable="true" type="zns:ExternalPaymentOptions" />
+          <q1:element minOccurs="0" name="GenerateInvoice" nillable="true" type="q1:boolean" />
+          <q1:element minOccurs="0" name="InvoiceProcessingOptions" nillable="true" type="zns:InvoiceProcessingOptions" />
+          <q1:element minOccurs="0" name="ProcessPayments" nillable="true" type="q1:boolean" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:complexType name="AmendRequest">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="Amendments" nillable="true" type="ons:Amendment" />
+          <q1:element minOccurs="0" name="AmendOptions" nillable="true" type="zns:AmendOptions" />
+          <q1:element minOccurs="0" name="PreviewOptions" nillable="true" type="zns:PreviewOptions" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:element name="amend">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="requests" type="zns:AmendRequest" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:complexType name="AmendResult">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="AmendmentIds" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="Errors" nillable="true" type="zns:Error" />
+          <q1:element minOccurs="0" maxOccurs="1" name="GatewayResponse" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" maxOccurs="1" name="GatewayResponseCode" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="InvoiceDatas" nillable="true" type="zns:InvoiceData" />
+          <q1:element minOccurs="0" name="InvoiceId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" name="PaymentId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" name="PaymentTransactionNumber" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" name="SubscriptionId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" maxOccurs="1" name="Success" type="q1:boolean" />
+          <q1:element minOccurs="0" name="TotalDeltaMrr" nillable="true" type="q1:decimal" />
+          <q1:element minOccurs="0" name="TotalDeltaTcv" nillable="true" type="q1:decimal" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:element name="amendResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" maxOccurs="unbounded" name="results" type="zns:AmendResult" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="rasdResponse">
+        <q1:complexType>
+          <q1:sequence>
+            <q1:element minOccurs="0" name="overlap" nillable="true" type="q1:int" />
+            <q1:element minOccurs="0" name="startDate" nillable="true" type="q1:date" />
+            <q1:element minOccurs="0" name="updatedBy" nillable="true" type="q1:string" />
+            <q1:element minOccurs="0" name="updatedOn" nillable="true" type="q1:dateTime" />
+          </q1:sequence>
+        </q1:complexType>
+      </q1:element>
+      <q1:element name="rasdRequest">
+        <q1:complexType>
+          <q1:sequence />
+        </q1:complexType>
+      </q1:element>
+      <q1:complexType name="ExternalPaymentOptions">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="Amount" nillable="true" type="q1:decimal" />
+          <q1:element minOccurs="0" name="EffectiveDate" nillable="true" type="q1:dateTime" />
+          <q1:element minOccurs="0" name="GatewayOrderId" nillable="true" type="q1:string" />
+          <q1:element minOccurs="0" name="PaymentMethodId" nillable="true" type="zns:ID" />
+          <q1:element minOccurs="0" name="ReferenceId" nillable="true" type="q1:string" />
+        </q1:sequence>
+      </q1:complexType>
+    </q1:schema>
+    <q1:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fault.api.zuora.com/" xmlns:q1="http://www.w3.org/2001/XMLSchema">
+      <q1:import namespace="http://api.zuora.com/" />
+      <q1:complexType name="ApiFault">
+        <q1:sequence>
+          <q1:element minOccurs="0" name="FaultCode" nillable="true" type="zns:ErrorCode" />
+          <q1:element minOccurs="0" name="FaultMessage" nillable="true" type="q1:string" />
+        </q1:sequence>
+      </q1:complexType>
+      <q1:element name="fault" type="fns:ApiFault" />
+      <q1:complexType name="LoginFault">
+        <q1:complexContent mixed="false">
+          <q1:extension base="fns:ApiFault" />
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:element name="LoginFault" type="fns:LoginFault" />
+      <q1:complexType name="InvalidTypeFault">
+        <q1:complexContent mixed="false">
+          <q1:extension base="fns:ApiFault" />
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:element name="InvalidTypeFault" type="fns:InvalidTypeFault" />
+      <q1:complexType name="InvalidValueFault">
+        <q1:complexContent mixed="false">
+          <q1:extension base="fns:ApiFault" />
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:element name="InvalidValueFault" type="fns:InvalidValueFault" />
+      <q1:complexType name="MalformedQueryFault">
+        <q1:complexContent mixed="false">
+          <q1:extension base="fns:ApiFault" />
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:element name="MalformedQueryFault" type="fns:MalformedQueryFault" />
+      <q1:complexType name="InvalidQueryLocatorFault">
+        <q1:complexContent mixed="false">
+          <q1:extension base="fns:ApiFault" />
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:element name="InvalidQueryLocatorFault" type="fns:InvalidQueryLocatorFault" />
+      <q1:complexType name="UnexpectedErrorFault">
+        <q1:complexContent mixed="false">
+          <q1:extension base="fns:ApiFault" />
+        </q1:complexContent>
+      </q1:complexType>
+      <q1:element name="UnexpectedErrorFault" type="fns:UnexpectedErrorFault" />
+    </q1:schema>
+  </types>
+  <message name="ApiFault">
+    <part name="fault" element="fns:fault" />
+  </message>
+  <message name="LoginFault">
+    <part name="fault" element="fns:LoginFault" />
+  </message>
+  <message name="InvalidTypeFault">
+    <part name="fault" element="fns:InvalidTypeFault" />
+  </message>
+  <message name="InvalidValueFault">
+    <part name="fault" element="fns:InvalidValueFault" />
+  </message>
+  <message name="MalformedQueryFault">
+    <part name="fault" element="fns:MalformedQueryFault" />
+  </message>
+  <message name="InvalidQueryLocatorFault">
+    <part name="fault" element="fns:InvalidQueryLocatorFault" />
+  </message>
+  <message name="UnexpectedErrorFault">
+    <part name="fault" element="fns:UnexpectedErrorFault" />
+  </message>
+  <message name="loginRequest">
+    <part name="parameters" element="zns:login" />
+  </message>
+  <message name="loginResponse">
+    <part name="parameters" element="zns:loginResponse" />
+  </message>
+  <message name="subscribeRequest">
+    <part name="parameters" element="zns:subscribe" />
+  </message>
+  <message name="subscribeResponse">
+    <part name="parameters" element="zns:subscribeResponse" />
+  </message>
+  <message name="createRequest">
+    <part name="parameters" element="zns:create" />
+  </message>
+  <message name="createResponse">
+    <part name="parameters" element="zns:createResponse" />
+  </message>
+  <message name="generateRequest">
+    <part name="parameters" element="zns:generate" />
+  </message>
+  <message name="generateResponse">
+    <part name="parameters" element="zns:generateResponse" />
+  </message>
+  <message name="updateRequest">
+    <part name="parameters" element="zns:update" />
+  </message>
+  <message name="updateResponse">
+    <part name="parameters" element="zns:updateResponse" />
+  </message>
+  <message name="deleteRequest">
+    <part name="parameters" element="zns:delete" />
+  </message>
+  <message name="deleteResponse">
+    <part name="parameters" element="zns:deleteResponse" />
+  </message>
+  <message name="executeRequest">
+    <part name="parameters" element="zns:execute" />
+  </message>
+  <message name="executeResponse">
+    <part name="parameters" element="zns:executeResponse" />
+  </message>
+  <message name="queryRequest">
+    <part name="parameters" element="zns:query" />
+  </message>
+  <message name="queryResponse">
+    <part name="parameters" element="zns:queryResponse" />
+  </message>
+  <message name="queryMoreRequest">
+    <part name="parameters" element="zns:queryMore" />
+  </message>
+  <message name="queryMoreResponse">
+    <part name="parameters" element="zns:queryMoreResponse" />
+  </message>
+  <message name="Header">
+    <part name="CallOptions" element="zns:CallOptions" />
+    <part name="QueryOptions" element="zns:QueryOptions" />
+    <part name="SessionHeader" element="zns:SessionHeader" />
+  </message>
+  <message name="rasdResponse">
+    <part name="parameters" element="zns:rasdResponse" />
+  </message>
+  <message name="rasdRequest">
+    <part name="parameters" element="zns:rasdRequest" />
+  </message>
+  <message name="getUserInfo">
+    <part name="getUserInfo" element="zns:getUserInfo" />
+  </message>
+  <message name="getUserInfoResponse">
+    <part name="parameters" element="zns:getUserInfoResponse" />
+  </message>
+  <message name="amendRequest">
+    <part name="parameters" element="zns:amend" />
+  </message>
+  <message name="amendResponse">
+    <part name="parameters" element="zns:amendResponse" />
+  </message>
+  <portType name="Soap">
+    <operation name="login">
+      <fault name="LoginFault" message="zns:LoginFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:loginRequest" />
+      <output message="zns:loginResponse" />
+    </operation>
+    <operation name="subscribe">
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:subscribeRequest" />
+      <output message="zns:subscribeResponse" />
+    </operation>
+    <operation name="create">
+      <fault name="InvalidTypeFault" message="zns:InvalidTypeFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:createRequest" />
+      <output message="zns:createResponse" />
+    </operation>
+    <operation name="generate">
+      <fault name="InvalidTypeFault" message="zns:InvalidTypeFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:generateRequest" />
+      <output message="zns:generateResponse" />
+    </operation>
+    <operation name="update">
+      <fault name="InvalidTypeFault" message="zns:InvalidTypeFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:updateRequest" />
+      <output message="zns:updateResponse" />
+    </operation>
+    <operation name="delete">
+      <fault name="InvalidTypeFault" message="zns:InvalidTypeFault" />
+      <fault name="InvalidValueFault" message="zns:InvalidValueFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:deleteRequest" />
+      <output message="zns:deleteResponse" />
+    </operation>
+    <operation name="execute">
+      <fault name="InvalidTypeFault" message="zns:InvalidTypeFault" />
+      <fault name="InvalidValueFault" message="zns:InvalidValueFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:executeRequest" />
+      <output message="zns:executeResponse" />
+    </operation>
+    <operation name="query">
+      <fault name="MalformedQueryFault" message="zns:MalformedQueryFault" />
+      <fault name="InvalidQueryLocatorFault" message="zns:InvalidQueryLocatorFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:queryRequest" />
+      <output message="zns:queryResponse" />
+    </operation>
+    <operation name="queryMore">
+      <documentation>Gets the next batch of sObjects from a query</documentation>
+      <fault name="InvalidQueryLocatorFault" message="zns:InvalidQueryLocatorFault" />
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:queryMoreRequest" />
+      <output message="zns:queryMoreResponse" />
+    </operation>
+    <operation name="getUserInfo">
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:getUserInfo" />
+      <output message="zns:getUserInfoResponse" />
+    </operation>
+    <operation name="rasd">
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:rasdRequest" />
+      <output message="zns:rasdResponse" />
+    </operation>
+    <operation name="amend">
+      <fault name="UnexpectedErrorFault" message="zns:UnexpectedErrorFault" />
+      <input message="zns:amendRequest" />
+      <output message="zns:amendResponse" />
+    </operation>
+  </portType>
+  <binding name="SoapBinding" type="zns:Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <fault name="LoginFault">
+        <soap:fault namespace="" use="literal" name="LoginFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="subscribe">
+      <soap:operation soapAction="" />
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="create">
+      <soap:operation soapAction="" />
+      <fault name="InvalidTypeFault">
+        <soap:fault namespace="" use="literal" name="InvalidTypeFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="CallOptions" use="literal" />
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generate">
+      <soap:operation soapAction="" />
+      <fault name="InvalidTypeFault">
+        <soap:fault namespace="" use="literal" name="InvalidTypeFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="update">
+      <soap:operation soapAction="" />
+      <fault name="InvalidTypeFault">
+        <soap:fault namespace="" use="literal" name="InvalidTypeFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="query">
+      <soap:operation soapAction="" />
+      <fault name="MalformedQueryFault">
+        <soap:fault namespace="" use="literal" name="MalformedQueryFault" />
+      </fault>
+      <fault name="InvalidQueryLocatorFault">
+        <soap:fault namespace="" use="literal" name="InvalidQueryLocatorFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="QueryOptions" use="literal" />
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryMore">
+      <soap:operation soapAction="" />
+      <fault name="InvalidQueryLocatorFault">
+        <soap:fault namespace="" use="literal" name="InvalidQueryLocatorFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="QueryOptions" use="literal" />
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="delete">
+      <soap:operation soapAction="" />
+      <fault name="InvalidTypeFault">
+        <soap:fault namespace="" use="literal" name="InvalidTypeFault" />
+      </fault>
+      <fault name="InvalidValueFault">
+        <soap:fault namespace="" use="literal" name="InvalidValueFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUserInfo">
+      <soap:operation soapAction="" />
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="rasd">
+      <soap:operation soapAction="" />
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="amend">
+      <soap:operation soapAction="" />
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="execute">
+      <soap:operation soapAction="" />
+      <fault name="InvalidTypeFault">
+        <soap:fault namespace="" use="literal" name="InvalidTypeFault" />
+      </fault>
+      <fault name="InvalidValueFault">
+        <soap:fault namespace="" use="literal" name="InvalidValueFault" />
+      </fault>
+      <fault name="UnexpectedErrorFault">
+        <soap:fault namespace="" use="literal" name="UnexpectedErrorFault" />
+      </fault>
+      <input>
+        <soap:header message="zns:Header" part="SessionHeader" use="literal" />
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ZuoraService">
+    <port name="Soap" binding="zns:SoapBinding">
+      <soap:address location="https://apisandbox.zuora.com/apps/services/a/61.0" />
+    </port>
+  </service>
+</definitions>

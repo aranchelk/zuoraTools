@@ -1,0 +1,7 @@
+.DS_Store
+packages/
+*.userprefs
+*.exe
+*.dll
+zuoraTools/obj/x86/
+zuoraTools/bin/
