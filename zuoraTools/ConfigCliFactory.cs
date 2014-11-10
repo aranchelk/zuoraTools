@@ -148,7 +148,7 @@ namespace zuoraTools
             {
 				Console.WriteLine ("Looked for ini file at: {0}", _iniFilePath);
 				Console.WriteLine ("Error: {0}", e.Message);
-                Console.WriteLine("No ini file location present, some operations may not work.");
+                Console.WriteLine("No ini file location present, some operations may not work. Example ini file at zuoraTools.ini.dist");
             }
         }
 
@@ -189,9 +189,9 @@ namespace zuoraTools
             //Todo: Add usage with new command structure.
             /*Console.Write("\nUsage examples:\n" +
                 "\tAdd Ids to a csv file:\n" +
-                "\t\tdatatools --ini dev-env --ids-from-sql-query \"select id from account where accountnumber = '{}'\" -s test.csv --where-column AccountNumber --o test.out\n\n" +
+                "\t\tzuoratools --ini dev-env --ids-from-sql-query \"select id from account where accountnumber = '{}'\" -s test.csv --where-column AccountNumber --o test.out\n\n" +
                 "\tUpdate zuora records overriding a field from the source file:\n" +
-                "\t\tdatatools --ini dev-env --update-zobjects --source-file accounts.csv --zobject-type account --property-value Name=NewName\n" +
+                "\t\tzuoratools --ini dev-env --update-zobjects --source-file accounts.csv --zobject-type account --property-value Name=NewName\n" +
                 "\n");*/
             Console.WriteLine("\nOptions:");
             _optSet.WriteOptionDescriptions(Console.Out);
@@ -213,11 +213,10 @@ namespace zuoraTools
         {
             string configPath = (Environment.OSVersion.Platform == PlatformID.Unix ||
             Environment.OSVersion.Platform == PlatformID.MacOSX)
-            ? Environment.GetEnvironmentVariable("HOME") + @"/.dataTools.ini"
-            : Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%") + @"\_dataTools.ini";
+            ? Environment.GetEnvironmentVariable("HOME") + @"/.zuoraTools.ini"
+            : Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%") + @"\_zuoraTools.ini";
 
-
-			Console.WriteLine ("config file at{0}", configPath);
+			//Console.WriteLine ("config file at{0}", configPath);
             return configPath;
         }
 

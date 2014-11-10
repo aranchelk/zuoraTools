@@ -1,0 +1,9 @@
+zuora-username=<username goes here>
+zuora-password=<password goes here>
+zuora-endpoint=https://apisandbox.zuora.com/apps/services/a/57.0
+zuora-export-uri=https://apisandbox.zuora.com/apps/api/file/
+
+sql-server=test
+sql-database=test
+sql-username=test
+sql-password=test
