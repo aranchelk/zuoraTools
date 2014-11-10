@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using zuoraTools.DataEnumerators;
 using zuoraTools.ZuoraConnections;
 using System.IO;
-using zuoraTools.zuora;
 
 namespace zuoraTools.BusinessLogic
 {

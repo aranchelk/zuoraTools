@@ -5,9 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using System.Threading;
-//using System.Web.UI.WebControls.Expressions;
 using zuoraTools.LogWriters;
-using zuoraTools.zuora;
 
 namespace zuoraTools.ZuoraConnections
 {

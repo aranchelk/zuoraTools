@@ -75,9 +75,7 @@
     <Compile Include="dbHelper.cs" />
     <Compile Include="TextProcessing.cs" />
     <Compile Include="ZObjectHelper.cs" />
-    <Compile Include="Web References\Reference.cs">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
+    <Compile Include="Services\ZuoraService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -95,15 +93,5 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="." />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="file:///Users/carl/sandbox/zuoraTools/zuora.a.61.0.wsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References</RelPath>
-      <UpdateFromURL>file:///Users/carl/sandbox/zuoraTools/zuora.a.61.0.wsdl</UpdateFromURL>
-    </WebReferenceUrl>
   </ItemGroup>
 </Project>

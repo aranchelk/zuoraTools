@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using zuoraTools.LogWriters;
-using zuoraTools.zuora;
 
 namespace zuoraTools.ZuoraConnections
 {

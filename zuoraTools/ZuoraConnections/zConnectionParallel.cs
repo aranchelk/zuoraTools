@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using zuoraTools.LogWriters;
-using zuoraTools.zuora;
 
 namespace zuoraTools.ZuoraConnections
 {

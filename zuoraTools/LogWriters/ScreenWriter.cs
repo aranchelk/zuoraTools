@@ -3,7 +3,6 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
-using zuoraTools.zuora;
 
 namespace zuoraTools.LogWriters
 {

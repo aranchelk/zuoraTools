@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using zuoraTools.ZuoraConnections;
-using zuoraTools.zuora;
 
 namespace zuoraTools.BusinessLogic
 {
